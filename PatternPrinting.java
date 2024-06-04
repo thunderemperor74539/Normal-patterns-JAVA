@@ -628,7 +628,7 @@ Q17
         10      11      12      13      14      15      16
 17      18      19      20      21      22      23      24      25
 
-        */
+        
         
 
 
@@ -655,6 +655,128 @@ Q17
             stars+=2;
             spaces--;
         }
+        //output
+                                1
+                        1       2       3
+                1       2       3       4       5
+        1       2       3       4       5       6       7
+1       2       3       4       5       6       7       8       9
+        
+
+//Q21
+        int n=5;
+        int rows=1;
+        int stars=1;
+        int spaces=n-1;
+        while(rows<=n){
+            int i=1;
+            while(i<=spaces){
+                System.out.print(" \t");          // we use \t for 4 spaces and make pattern good and visible
+                i++;
+            }
+            int j=1;
+            int val=1;
+            while(j<=stars){
+                System.out.print(val +"\t");
+                val++;
+                j++; 
+            }
+            rows++;
+            System.out.println();
+            stars+=2;
+            spaces--;
+        }
+
+//Output
+                                1
+                        1       2       3
+                1       2       3       4       5
+        1       2       3       4       5       6       7
+1       2       3       4       5       6       7       8       9
+        
+
+
+
+        //Q22
+        int n=5;
+        int stars=1;
+        int spaces=n-1;
+        int rows=1;
+        while(rows<=n){
+            int i=1;
+            while(i<=spaces){
+                System.out.print("  ");
+                i++;
+            }
+            int j=1;
+            int val=1;
+            while(j<=stars){
+                System.out.print(val+ " ");
+                //MIRRORING CONCEPT
+                if(j<=stars/2){
+                    val++;
+                }
+                else{
+                    val--;
+                }
+                j++;
+            }
+            rows++;
+            System.out.println();
+            spaces--;
+            stars+=2;
+        }
+        //output
+        1 
+      1 2 1 
+    1 2 3 2 1 
+  1 2 3 4 3 2 1 
+1 2 3 4 5 4 3 2 1
+        */
+
+
+        int n=3;
+        int rows=1;
+        int stars=1;
+        int spaces=n-1;
+        int val=1;
+        while(rows<=2*n-1){
+            int i=1;
+            while(i<=spaces){
+                System.out.print("  ");
+                i++;   
+            }
+            int j=1;
+            int p=val;
+            while(j<=stars){
+                System.out.print(p+ " ");
+                if(p<=stars/2){
+                    p++;
+                }
+                else{
+                    p--;
+                }
+                j++;
+                
+            }
+            if(rows<n){
+                spaces--;
+                stars+=2;
+                val++;
+            }
+            else{
+                spaces++;
+                stars-=2;
+                val--;
+            }
+            rows++;
+            System.out.println();
+            
+        }
+
+
+
+
 
 
         
